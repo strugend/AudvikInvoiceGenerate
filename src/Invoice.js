@@ -120,28 +120,40 @@ const Invoice = ({ data }) => {
             ) : (
               <>
                 <>
-              <span className="field-label">Food Details:</span>
-              <span className="field-value">
-                <ol className="field-value">
-                  {foodDetail && <li>{foodDetail}</li>}
-                </ol>
-              </span>
-            </>
+                  <span className="field-label">Food Details:</span>
+                  <span className="field-value">
+                    <ol className="field-value">
+                      {foodDetail && <li>{foodDetail}</li>}
+                    </ol>
+                  </span>
+                </>
               </>
             )}
           </div>
-          <div className="section-field">
-            <span className="field-label">Offer:</span>
-            <span className="field-value">{data.offer}</span>
-          </div>
-          <div className="section-field">
-            <span className="field-label">Table Number:</span>
-            <span className="field-value">{data.tableNumber}</span>
-          </div>
-          <div className="section-field">
-            <span className="field-label">Timeline:</span>
-            <span className="field-value">{data.timeline}</span>
-          </div>
+          {data.offer ? (
+            <div className="section-field">
+              <span className="field-label">Offer:</span>
+              <span className="field-value">{data.offer}</span>
+            </div>
+          ) : (
+            <></>
+          )}
+          {data.tableNumber ? (
+            <div className="section-field">
+              <span className="field-label">Table Number:</span>
+              <span className="field-value">{data.tableNumber}</span>
+            </div>
+          ) : (
+            <></>
+          )}
+          {data.timeline ? (
+            <div className="section-field">
+              <span className="field-label">Timeline:</span>
+              <span className="field-value">{data.timeline}</span>
+            </div>
+          ) : (
+            <></>
+          )}
           <hr />
           <div className="section-field">
             <span className="field-label">Grand Total:</span>
