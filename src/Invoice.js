@@ -62,14 +62,6 @@ const Invoice = ({ data }) => {
         <div className="invoice-section">
           <h2 className="section-title">Order Details</h2>
           <div className="section-field">
-            <span className="field-label">Completed:</span>
-            <span className="field-value">{data.Completed ? "Yes" : "No"}</span>
-          </div>
-          <div className="section-field">
-            <span className="field-label">Cooked:</span>
-            <span className="field-value">{data.Cooked ? "Yes" : "No"}</span>
-          </div>
-          <div className="section-field">
             <span className="field-label">Date:</span>
             <span className="field-value">
               {convertTimestampToDateTime(data.DateTime)}
@@ -101,10 +93,6 @@ const Invoice = ({ data }) => {
         </div>
         <div className="invoice-section">
           <h2 className="section-title">Order Summary</h2>
-          <div className="section-field">
-            <span className="field-label">Order Price:</span>
-            <span className="field-value">{data.OrderPrice}</span>
-          </div>
           <div className="section-field">
             {data.StoreFoodDetails ? (
               <>
@@ -158,7 +146,7 @@ const Invoice = ({ data }) => {
           <div className="section-field">
             <span className="field-label">Grand Total:</span>
             <span className="field-value grand-total">
-              {calculateGrandTotal()}
+              ₹ {calculateGrandTotal()}
             </span>
           </div>
         </div>

@@ -37,7 +37,7 @@ const LegalPage = () => {
 
       <h5>Terms and Conditions</h5>
       <p>
-        By using the Audvik application, you agree to the following terms and conditions:
+        By using the Strugend application, you agree to the following terms and conditions:
       </p>
         <ol>
             <li>Account Creation:
