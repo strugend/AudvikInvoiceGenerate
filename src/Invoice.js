@@ -47,12 +47,12 @@ const Invoice = ({ data }) => {
       <div className="invoice-header">
         <div className="invoice-header-top">
           <div className="invoice-logo-container">
-            <img src={data.passedImage} alt="Logo" className="invoice-logo" />
+            <img src={data.shopImage} alt="Logo" className="invoice-logo" />
           </div>
           <div className="invoice-info">
-            <h2 className="invoice-name">{data.passedName}</h2>
+            <h2 className="invoice-name">{data.ownerName}</h2>
             <div className="invoice-gst-number">
-              GST Number: {data.passedGST}
+              GST Number: {data.gstNumber}
             </div>
           </div>
         </div>
